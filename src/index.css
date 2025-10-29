@@ -1,0 +1,103 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --border: 220 25% 20%;
+    --background: 220 25% 8%;
+    --foreground: 210 40% 98%;
+    
+
+    --card: 220 25% 10%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 220 25% 10%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 263 70% 60%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 220 25% 15%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 220 25% 15%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 263 70% 60%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 220 25% 20%;
+    --input: 220 25% 20%;
+    --ring: 263 70% 60%;
+
+    --radius: 0.75rem;
+
+    /* Custom gradient colors */
+    --gradient-start: 263 70% 60%;
+    --gradient-end: 220 90% 56%;
+    
+    /* Hero accent */
+    --hero-accent: 280 80% 65%;
+    
+    /* Glass effect */
+    --glass-bg: 220 25% 12%;
+    --glass-border: 220 25% 25%;
+  }
+}
+
+@layer base {
+  * {
+   /* @apply border-border;*/
+  }
+
+  body {
+    /* @apply bg-background text-foreground;*/
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .gradient-primary {
+    background: linear-gradient(135deg, hsl(var(--gradient-start)), hsl(var(--gradient-end)));
+  }
+
+  .gradient-text {
+    background: linear-gradient(135deg, hsl(var(--gradient-start)), hsl(var(--gradient-end)));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .glass-card {
+    background: hsl(var(--glass-bg) / 0.4);
+    backdrop-filter: blur(12px);
+    border: 1px solid hsl(var(--glass-border) / 0.3);
+  }
+
+  .section-padding {
+    /*@apply py-20 px-6;*/
+  }
+}
+
+@layer base {
+  * {
+    /*@apply border-border;*/
+  }
+
+  body {
+    /*@apply bg-background text-foreground;*/
+  }
+}
